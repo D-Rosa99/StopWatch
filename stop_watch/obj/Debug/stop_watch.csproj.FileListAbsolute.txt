@@ -1,0 +1,7 @@
+C:\Users\David D' Rosa Ruiz\source\repos\stop_watch\stop_watch\bin\Debug\stop_watch.exe.config
+C:\Users\David D' Rosa Ruiz\source\repos\stop_watch\stop_watch\bin\Debug\stop_watch.exe
+C:\Users\David D' Rosa Ruiz\source\repos\stop_watch\stop_watch\bin\Debug\stop_watch.pdb
+C:\Users\David D' Rosa Ruiz\source\repos\stop_watch\stop_watch\obj\Debug\stop_watch.csprojAssemblyReference.cache
+C:\Users\David D' Rosa Ruiz\source\repos\stop_watch\stop_watch\obj\Debug\stop_watch.csproj.CoreCompileInputs.cache
+C:\Users\David D' Rosa Ruiz\source\repos\stop_watch\stop_watch\obj\Debug\stop_watch.exe
+C:\Users\David D' Rosa Ruiz\source\repos\stop_watch\stop_watch\obj\Debug\stop_watch.pdb
