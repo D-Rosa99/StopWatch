@@ -9,35 +9,38 @@ namespace stop_watch
 {
     class StopWatch
     {
-        private TimeSpan time1;
+        private Stopwatch time1 = new Stopwatch();
         private TimeSpan time2;
 
-        public TimeSpan Start_Time()
+        public void Start_Time()
         {
-            Console.Write("Escribe la hora de inicio\t");
-            var HourStart = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Escribe los mimutos de inicio\t");
-            var MinutStart = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Escribe los segundos de inicio\t");
-            var SecondStart = Convert.ToInt32(Console.ReadLine());
-
-            return time1= new TimeSpan(HourStart,MinutStart,SecondStart);
+            Console.Write("Presiona 'Enter' para iniciar el StopWatch ");
+            Console.ReadLine();
+            time1.Start();
+            Console.WriteLine("Tiempo Inicial: "+DateTime.Now.ToLongTimeString());
+            Stop_Time();
         }
 
-        public TimeSpan Stop_Time()
+        public void Stop_Time()
         {
-            Console.Write("\nEscribe la hora de final\t");
-            var HourFinal = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Escribe los mimutos de final\t");
-            var MinutFinal = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Escribe los segundos de final\t");
-            var SecondFinal = Convert.ToInt32(Console.ReadLine());
-
-            return time2 = new TimeSpan(HourFinal,MinutFinal,SecondFinal);
+            Console.Write("\nPresiona 'Enter' cuando quieras detener el StopWatch y mostrar la duracion \ndel tiempo inicial hasta este momento ");
+            Console.ReadLine();
+            time1.Stop();
+            time2 = time1.Elapsed;
+            Console.WriteLine("\nTiempo Final: " + DateTime.Now.ToLongTimeString());
+            Console.WriteLine("La duracion es: "+time2+" Desde el tiempo inicial");
+            Console.WriteLine("\nPreciona 'Enter' para continuar la cuenta o 'R' para reiniciar el StopWatch");
+            var answer = Console.ReadLine();
+            if (answer.ToLower() == "r")
+            {
+                Console.Clear();
+                Start_Time();
+            }
+            else
+            {
+                time1.Start();
+                Stop_Time();
+            }
         }
     }
 }
